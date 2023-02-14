@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Евклид</title>
+  <!-- fonts -->
+  <link rel="preload" href="fonts/montserrat-v15-cyrillic-500.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-v15-cyrillic-600.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-v15-cyrillic-700.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-v15-cyrillic-800.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-v15-cyrillic-900.woff2" as="font">
+  <link rel="preload" href="fonts/montserrat-v15-cyrillic-regular.woff2" as="font">
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- <link rel="stylesheet" href="css/media.css"> -->
+  <link rel="stylesheet" href="css/media.min.css">
+
+  <!-- Подключаю Slider -->
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <!-- Подключаю jQuery UI Accordion -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <!-- Подключаю jQuery -->
+  <script defer src="js/jquery-3.6.0.min.js"></script>
+  <script defer src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+  <!-- Подключаю файла JS -->
+  <script defer src="js/script.js"></script>
+</head>
+
+<body>
+  <!-- Header ==================================== -->
+  <header class="header">
+    <div class="container">
+
+      <div class="header-body">
+        <div class="header-burger">
+          <span></span>
+        </div>
+
+        <a aria-label="Логотип" href="#" class="header-logo"></a>
+
+        <div class="header-right">
+          <nav class="header-menu">
+            <ul class="header-menu__list">
+              <li class="header-menu__link">
+                <a href="https://jsonplaceholder.typicode.com/posts" class="header-menu__text">
+                  О&nbsp;нас
+                </a>
+              </li>
+              <li class="header-menu__link">
+                <a href="https://jsonplaceholder.typicode.com/posts" class="header-menu__text">
+                  Проекты
+                </a>
+              </li>
+              <li class="header-menu__link">
+                <a href="https://jsonplaceholder.typicode.com/posts" class="header-menu__text">
+                  Этапы
+                </a>
+              </li>
+              <li class="header-menu__link">
+                <a href="https://jsonplaceholder.typicode.com/posts" class="header-menu__text">
+                  Отзывы
+                </a>
+              </li>
+              <li class="header-menu__link">
+                <a href="https://jsonplaceholder.typicode.com/posts" class="header-menu__text">
+                  Контакты
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <button aria-label="Найти" class="header-menu__btn">
+            <svg class="header-menu__svg" width="25" height="26" viewbox="0 0 25 26" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="18.5138" y="18.5495" width="8" height="2" transform="rotate(45 18.5138 18.5495)"
+                fill="#333333" />
+              <circle cx="11.5" cy="11.5" r="10.5" stroke="#333333" stroke-width="2" />
+            </svg>
+          </button>
+
+        </div>
+
+        <button aria-label="Найти" class="header-menu__btn burger-btn">
+          <svg class="header-menu__svg" width="25" height="26" viewbox="0 0 25 26" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="18.5138" y="18.5495" width="8" height="2" transform="rotate(45 18.5138 18.5495)" fill="#333333" />
+            <circle cx="11.5" cy="11.5" r="10.5" stroke="#333333" stroke-width="2" />
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Section Slider ==================================== -->
+    <section class="slider">
+      <div class="container">
+        <div class="swiper-container">
+          <div class="swiper__position">
+            <h1 class="swiper__heading">Проектные решения любой сложности</h1>
+
+            <h3 class="swiper__text">Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день
+              остаются уделом
+              проектантов</h3>
+
+            <button class="swiper__btn">
+              Заказать расчёт
+            </button>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide" style="background-image: url(img/slide-1.webp);"></div>
+              <div class="swiper-slide" style="background-image: url(img/slide-2.webp);"></div>
+              <div class="swiper-slide" style="background-image: url(img/slide-3.webp);"></div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section About us ==================================== -->
+    <section class="aboutus">
+      <div class="container">
+        <div class="about">
+          <h2 class="about-title">
+            О нас
+          </h2>
+          <p class="about__text">
+            Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда
+            внеочередных мероприятий с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности.
+            А
+            также диаграммы связей могут быть описаны максимально подробно. Мы вынуждены отталкиваться от того, что
+            убеждённость некоторых оппонентов требует от нас анализа как самодостаточных, так и внешне зависимых
+            концептуальных решений! Следует отметить, что высококачественный прототип &nbsp;<span
+              class="about__tooltip"></span> будущего проекта предопределяет высокую востребованность позиций,
+            занимаемых
+            участниками в отношении поставленных задач. Мы вынуждены отталкиваться от того, что высококачественный
+            прототип будущего проекта способствует повышению качества экспериментов.
+          </p>
+        </div>
+        <!-- </div> -->
+
+        <!-- <div class="container"> -->
+        <div class="aside">
+          <div class="aside-block1">
+            <div class="aside-block1__info">
+              <p class="aside-block1__text">
+                Принимая во внимание показатели успешности, перспективное планирование способствует подготовке и
+                реализации новых принципов.
+              </p>
+              <button class="aside-block1__btn">
+                Подробнее
+              </button>
+            </div>
+          </div>
+
+          <div class="aside-block2">
+            <div class="aside-block2__pic">
+              <div class="aside-block2__text">
+                <strong class="aside-block2__subtitle">
+                  Консультация с широким активом
+                </strong>
+                <p class="aside-block2__lead">
+                  А также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для
+                  как самодостаточных, так и внешне зависимых концептуальных решений.
+                </p>
+              </div>
+            </div>
+
+            <div class="aside-block2__pic aside-block2__pic--pic2">
+              <div class="aside-block2__text">
+                <strong class="aside-block2__subtitle">
+                  В своём стремлении повысить
+                </strong>
+                <p class="aside-block2__lead">
+                  Качество жизни, они забывают, что сплочённость команды профессионалов представляет собой интересный
+                  эксперимент проверки прогресса профессионального сообщества.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How we are working ==================================== -->
+    <section class="work">
+      <div class="container">
+        <div class="working">
+
+          <div class="working-header">
+            <h2 class="working-header__title">
+              Как мы работаем
+            </h2>
+            <ul class="working-header__list">
+              <li aria-label="Первый шаг" class="working-header__li"><button class="working-header__text"
+                  data-path="one">1 шаг</button>
+              </li>
+              <li aria-label="Второй шаг" class="working-header__li"><button class="working-header__text"
+                  data-path="two">2 шаг</button>
+              </li>
+              <li aria-label="Третий шаг" class="working-header__li"><button class="working-header__text"
+                  data-path="three">3 шаг</button>
+              </li>
+              <li aria-label="Четвертый шаг" class="working-header__li"><button class="working-header__text"
+                  data-path="four">4 шаг</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="working-content working-content-active" data-target="one">
+            <div class="working-block">
+              <div class="working-block__left">
+                <span class="working-block__subtitle">
+                  Проводим консультацию
+                </span>
+                <p class="working-block__info">
+                  Влечет за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках
+                  спецификации
+                  современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены
+                  соответствующими инстанциями. А также представители современных социальных резервов, инициированные
+                  исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей
+                  картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии
+                  независимых исследований. Кстати, &nbsp;стремящиеся вытеснить традиционное производство,
+                  нанотехнологии
+                  освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется,
+                  призваны
+                  к ответу.
+                </p>
+                <div class="working-btn">
+                  <button class="working-btn__details">
+                    Подробнее
+                  </button>
+                  <button class="working-btn__contract">
+                    Договор
+                  </button>
+                </div>
+              </div>
+              <img src="img/rectangle-17.webp" alt="Первый слайд" class="working-block__right">
+            </div>
+          </div>
+
+          <div class="working-content" data-target="two">
+            <div class="working-block">
+              <div class="working-block__left">
+                <span class="working-block__subtitle">
+                  Составляем смету
+                </span>
+                <p class="working-block__info">
+                  Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных
+                  стандартов,
+                  некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А
+                  также представители современных социальных резервов, инициированные исключительно синтетически,
+                  ограничены
+                  исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных
+                  источников, современные исследования подвергнуты целой серии независимых исследований.
+                </p>
+                <div class="working-btn">
+                  <button class="working-btn__details">
+                    Подробнее
+                  </button>
+                  <button class="working-btn__contract">
+                    Договор
+                  </button>
+                </div>
+              </div>
+              <img src="img/rectangle-18.webp" alt="Второй слайд" class="working-block__right">
+            </div>
+          </div>
+
+          <div class="working-content" data-target="three">
+            <div class="working-block">
+              <div class="working-block__left">
+                <span class="working-block__subtitle">
+                  Привлекаем подрядчиков
+                </span>
+                <p class="working-block__info">
+                  Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа
+                  прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории
+                  является четким доказательством простого факта: высококачественный прототип будущего проекта напрямую
+                  зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель
+                  организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание
+                  показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности
+                  позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+                </p>
+                <div class="working-btn">
+                  <button class="working-btn__details">
+                    Подробнее
+                  </button>
+                  <button class="working-btn__contract">
+                    Договор
+                  </button>
+                </div>
+              </div>
+              <img src="img/rectangle-19.webp" alt="Третий слайд" class="working-block__right">
+            </div>
+          </div>
+
+          <div class="working-content" data-target="four">
+            <div class="working-block">
+              <div class="working-block__left">
+                <span class="working-block__subtitle">
+                  Инспектируем все этапы работ
+                </span>
+                <p class="working-block__info">
+                  Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого
+                  факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений
+                  развития.
+                  Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о
+                  возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное
+                  информационно-пропагандистское обеспечение нашей деятельности позволяет.
+                </p>
+                <div class="working-btn">
+                  <button class="working-btn__details">
+                    Подробнее
+                  </button>
+                  <button class="working-btn__contract">
+                    Договор
+                  </button>
+                </div>
+              </div>
+              <img src="img/rectangle-20.webp" alt="Четвертый слайд" class="working-block__right">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Frequently asked Questions, Accordion ==================================== -->
+    <section class="faq">
+      <div class="container">
+        <h2 class="question-header">
+          Часто задаваемые вопросы
+        </h2>
+
+        <ul class="question one">
+          <li class="question__block">
+            <div class="question__link">
+              <h3 class="question__link-text">
+                Из чего формируется конечная стоимость проекта?
+              </h3>
+              <svg class="question__icon rotation" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="#666666" />
+              </svg>
+            </div>
+            <p class="question__text">
+              Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+              новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+              прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+              особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+              политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+              что
+              явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+              должны
+              быть указаны как претенденты на роль ключевых факторов.
+              <br>
+              <br>
+              Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+              Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+              значит,
+              должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+              известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+              исключительно положительном свете.
+            </p>
+          </li>
+
+          <li class="question__block">
+            <div class="question__link">
+              <h3 class="question__link-text">
+                У меня есть свой проект. Сможем ли мы его доработать <span class="question__slash">/</span>
+                реализовать?
+              </h3>
+              <svg class="question__icon rotation" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="#666666" />
+              </svg>
+            </div>
+            <p class="question__text">
+              Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+              новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+              прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+              особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+              политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+              что
+              явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+              должны
+              быть указаны как претенденты на роль ключевых факторов.
+              <br>
+              <br>
+              Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+              Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+              значит,
+              должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+              известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+              исключительно положительном свете.
+            </p>
+          </li>
+
+          <li class="question__block">
+            <div class="question__link">
+              <h3 class="question__link-text">
+                Я выбираю между разными компаниями. В чём ваше отличие?
+              </h3>
+              <svg class="question__icon rotation" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="#666666" />
+              </svg>
+            </div>
+            <p class="question__text">
+              Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+              новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+              прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+              особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+              политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+              что
+              явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+              должны
+              быть указаны как претенденты на роль ключевых факторов.
+              <br>
+              <br>
+              Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+              Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+              значит,
+              должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+              известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+              исключительно положительном свете.
+            </p>
+          </li>
+
+          <li class="question__block">
+            <div class="question__link">
+              <h3 class="question__link-text">
+                Могу ли я делегировать вам работу <span class="question__slash">/</span> согласование с
+                подрядчиком <span class="question__slash">/</span> организацией?
+              </h3>
+              <svg class="question__icon rotation" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="#666666" />
+              </svg>
+            </div>
+            <p class="question__text">
+              Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+              новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+              прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+              особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+              политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+              что
+              явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+              должны
+              быть указаны как претенденты на роль ключевых факторов.
+              <br>
+              <br>
+              Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+              Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+              значит,
+              должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+              известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+              исключительно положительном свете.
+            </p>
+          </li>
+
+          <li class="question__block">
+            <div class="question__link">
+              <h3 class="question__link-text">
+                Могу ли я вернуть деньги на каком-либо из этапов работ?
+              </h3>
+              <svg class="question__icon rotation" width="50" height="50" viewbox="0 0 50 50" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <ellipse cx="25" cy="25" rx="25" ry="25" fill="#ECECEC" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M25.0571 24.0571L25.0571 9L25.9429 9L25.9429 24.0571L33.8835 24.0571L41 24.0571L41 24.9429L25.9429 24.9429L25.9429 40L25.0571 40L25.0571 24.9429L10 24.9429L10 24.0571L25.0571 24.0571Z"
+                  fill="#666666" />
+              </svg>
+            </div>
+            <p class="question__text">
+              Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к
+              новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный
+              прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые
+              особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа
+              политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений,
+              что
+              явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь,
+              должны
+              быть указаны как претенденты на роль ключевых факторов.
+              <br>
+              <br>
+              Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу.
+              Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а
+              значит,
+              должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также многие
+              известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть представлены в
+              исключительно положительном свете.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer ==================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-container">
+
+        <!-- !Block 1 -->
+        <div class="footer-contacts">
+          <a aria-label="Логотип" href="https://jsonplaceholder.typicode.com/posts" class="footer__logo">
+            <img src="img/logo-2.png" alt="Логотип">
+          </a>
+          <a href="https://jsonplaceholder.typicode.com/posts" class="footer-contacts__link">
+            О нас
+          </a>
+          <a href="https://jsonplaceholder.typicode.com/posts" class="footer-contacts__link">
+            Проекты
+          </a>
+          <a href="https://jsonplaceholder.typicode.com/posts" class="footer-contacts__link">
+            Отзывы
+          </a>
+          <a href="https://jsonplaceholder.typicode.com/posts" class="footer-contacts__link">
+            Договор оферты
+          </a>
+          <a href="https://jsonplaceholder.typicode.com/posts" class="footer-contacts__link">
+            Договор подряда
+          </a>
+          <a href="https://jsonplaceholder.typicode.com/posts" class="footer-contacts__link">
+            Конфиденциальность
+          </a>
+          <a href="https://jsonplaceholder.typicode.com/posts" class="footer-contacts__link">
+            Партнёрское соглашение
+          </a>
+          <div class="footer-contacts__socials">
+            <a aria-label="facebook" href="facebook" class="footer-contacts__facebook size"></a>
+            <a aria-label="vk" href="vk" class="footer-contacts__vk size"></a>
+            <a aria-label="instagram" href="instagram" class="footer-contacts__instagram size"></a>
+          </div>
+        </div>
+
+        <!-- !Block 2 -->
+        <div class="footer-request">
+          <h2 class="request-title">
+            Оставить заявку
+          </h2>
+          <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST"
+            class="footer-request__menu">
+            <input required type="search" name="text" placeholder="Фамилия, имя и отчество*"
+              class="footer-request__link">
+            <input required type="search" name="text" placeholder="E-mail*" class="footer-request__link">
+            <textarea name="textarea" id="textarea" cols="30" rows="7" placeholder="Сообщение"
+              class="footer-request__link footer-request__textarea"></textarea>
+            <div class="footer-request__control">
+              <button class="footer-request__btn">Отправить данные</button>
+
+              <label class="footer-request__label">
+                <input required type="checkbox" class="footer-request__check" checked>
+                <span class="footer-request__text"></span>
+                Согласен на обработку данных
+              </label>
+            </div>
+          </form>
+        </div>
+
+        <!-- !Block 3 -->
+        <div class="footer-info">
+          <p class="footer-info__text">
+            Высокий уровень вовлечения представителей целевой аудитории является
+            четким доказательством простого факта: разбавленное изрядной долей эмпатии, рациональное мышление позволяет
+            оценить значение модели развития. Таким
+            образом, консультация с широким активом обеспечивает широкому кругу (специалистов) участие в формировании
+            стандартных подходов.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>

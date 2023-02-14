@@ -1,0 +1,898 @@
+@media (max-width: 1366px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: calc(60px + (10 + 10 * 0.7) * ((100vw - 1366px) / 1920));
+    line-height: 73px;
+  }
+
+  h3 {
+    font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 1366px) / 1920));
+  }
+
+  .container {
+    padding: 0 50px;
+  }
+
+  /* Header ==================================== */
+  /* Section Slider ==================================== */
+  /* Section About us ==================================== */
+  .about-title {
+    padding: 0;
+  }
+
+  /* Section Aside ==================================== */
+  .aside-block1__info {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .aside-block1__text {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+
+  .aside-block1__btn {
+    margin: 0;
+  }
+
+  .aside-block2__pic {
+    background-position: 7% 40%;
+    background-size: 12.5vw;
+    padding: 5% 0 0 35%;
+  }
+
+  /* How we are working ==================================== */
+  /* Frequently asked Questions ==================================== */
+  .question__link-text {
+    max-width: 75vw;
+  }
+
+  /* Footer ==================================== */
+  .footer-request {
+    margin: 0;
+  }
+
+  .footer-info {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: calc(60px + (10 + 10 * 0.7) * ((100vw - 1024px) / 1920));
+    line-height: 73px;
+  }
+
+  h3 {
+    font-size: calc(20px + (4 + 4 * 0.7) * ((100vw - 1024px) / 1920));
+  }
+
+  /* Header ==================================== */
+  .header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 2;
+  }
+
+  .header-body {
+    transform: none;
+    height: 100px;
+  }
+
+  .header-burger {
+    display: block;
+  }
+
+  .header-logo {
+    width: 150px;
+    height: 48px;
+    transform: none;
+    transform: translateX(-3px);
+    margin: 0 auto;
+  }
+
+  .header-burger.activ span {
+    transform: scale(0);
+  }
+
+  /* Анимируем Бургер */
+  .header-burger.activ::before {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  .header-burger.activ::after {
+    transform: rotate(-45deg);
+    bottom: 10px;
+  }
+  /* Стоп аинмация */
+
+  .header-menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    opacity: 0.97;
+    transition: all 0.3s ease 0s;
+    background-color: #ff9900;
+    padding-top: 100px;
+  }
+
+  .header-menu.activ {
+    top: 0;
+  }
+
+  .header-menu__list {
+    display: block;
+  }
+
+  .header-menu__list li {
+    margin: 75px;
+  }
+
+  .header-menu__text {
+    font-size: 37px;
+    color: #ffffff;
+  }
+
+  .header-menu__btn {
+    display: none;
+  }
+
+  .burger-btn {
+    display: block;
+    transform: translateY(3px);
+    z-index: 3;
+  }
+
+  /* Section Slider ==================================== */
+  .swiper-container {
+    padding-top: 98px;
+    margin-bottom: 59px;
+  }
+
+  .swiper {
+    height: 670px;
+  }
+
+  .swiper__position {
+    max-width: 675px;
+    padding: 0;
+    margin: 16vw 0 11.13vw 4.39vw;
+  }
+
+  .swiper__heading {
+    max-width: 700px;
+    letter-spacing: -1.5px;
+    margin: 0;
+    margin-bottom: 7px;
+  }
+
+  .swiper__text {
+    max-width: 658px;
+    letter-spacing: 0px;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 110px;
+  }
+
+  .swiper__btn {
+    padding: 19px 43px;
+  }
+
+  /* Section About us ==================================== */
+  .about {
+    margin-bottom: 59px;
+  }
+
+  .about-title {
+    transform: translateX(-3px);
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  .about__text {
+    max-width: 100%;
+  }
+
+  .about__tooltip {
+    transform: translateY(2.5px);
+  }
+
+  /* Section Aside ==================================== */
+  .aside {
+    display: block;
+    width: 100%;
+    margin-bottom: 59px;
+  }
+
+  .aside-block1 {
+    width: 100%;
+    height: 640px;
+    margin: 0;
+    margin-bottom: 49px;
+  }
+
+  .aside-block1__info {
+    height: 27%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .aside-block1__text {
+    max-width: 497px;
+    text-align: start;
+    margin-left: 44px;
+  }
+
+  .aside-block1__btn {
+    padding: 18px 33px;
+    margin-right: 52px;
+  }
+
+  .aside-block2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .aside-block2__pic {
+    background-size: 17.5vw;
+    background-position: 10.7vw 7.3vw;
+    padding: 6.4vw 0 0 34vw;
+    margin-bottom: 39px;
+  }
+
+  .aside-block2__text {
+    max-width: 452px;
+    text-align: start;
+  }
+
+  .aside-block2__pic--pic2 {
+    background-position: 111px 61px;
+  }
+
+  /* How we are working ==================================== */
+  .working {
+    margin-bottom: 53px;
+  }
+
+  .working-header__title {
+    margin-left: -6px;
+  }
+
+  .working-header__list li {
+    padding-right: 8vw;
+  }
+
+  .working-block__subtitle {
+    margin: 4px 0;
+  }
+
+  .working-block__info {
+    max-width: 437px;
+    transform: translateY(0px);
+    margin-bottom: 6%;
+  }
+
+  .working-block__right {
+    max-width: 47.3%;
+  }
+
+
+  /* Frequently asked Questions ==================================== */
+  .question {
+    margin-bottom: 55px;
+  }
+
+  .question-header {
+    margin: 1px 0px 38px 0px;
+  }
+
+  .question__link-text {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .question__link {
+    height: 115px;
+  }
+
+  /* Footer ==================================== */
+  .footer-request__btn {
+    padding: 20px 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: max(1.25em, min(3.75em, calc(100vw * 3.75 / 48)));
+    line-height: 73px;
+  }
+
+  h3 {
+    font-size: max(0.75em, min(1.25em, calc(100vw * 1.25 / 48)));
+  }
+
+  .container {
+    padding: 0;
+    max-width: 768px;
+  }
+
+  /* Header ==================================== */
+  .header-body {
+    height: 68px;
+    padding: 0 50px;
+  }
+
+  /* Section Slider ==================================== */
+  .swiper-container {
+    padding-top: 68px;
+    margin-bottom: 88px;
+  }
+
+  .swiper__position {
+    margin: 25vw 0 11.13vw 6.2vw;
+  }
+
+  .swiper__heading {
+    letter-spacing: -2.5px;
+    margin-bottom: 10px;
+  }
+
+  .swiper__btn {
+    padding: 25px 43px;
+  }
+
+  /* Section About us ==================================== */
+  .about {
+    padding: 0 50px;
+  }
+
+  /* Section Aside ==================================== */
+  .aside {
+    padding: 0 50px;
+  }
+
+  .aside-block1{
+    height: 650px;
+    margin-bottom: 40px;
+  }
+
+  .aside-block2__pic{
+    height: 100%;
+    background-size: 15.6vw;
+    background-position: 3.6vw 9.4vw;
+    padding: 4.7vw 0 2.5vw 23vw;
+  }
+
+  .aside-block1__text {
+    max-width: 400px;
+    font-size: 16px;
+    line-height: 31px;
+    margin-top: 6px;
+    margin-left: 29px;
+  }
+
+  .aside-block1__btn {
+    padding: 18px 35px;
+    margin-top: 3px;
+    margin-right: 30px;
+  }
+
+  /* How we are working ==================================== */
+  .working {
+    padding: 0 50px;
+  }
+
+  .working-header__title {
+    margin-bottom: 48px;
+  }
+
+  .working-header__list {
+    justify-content: space-between;
+    margin-bottom: 46px;
+  }
+
+  .working-header__list li {
+    padding: 0;
+  }
+
+  .working-header__text {
+    padding: 0;
+  }
+
+  .working-block {
+    /* меняю блоки местами */
+    flex-direction: column-reverse;
+  }
+
+  .working-block__left {
+    min-width: 100%;
+  }
+
+  .working-block__info {
+    font-size: max(0.75em, min(1.25em, calc(100vw * 1.25 / 48)));
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .working-block__right {
+    min-width: 100%;
+    height: 284px;
+    margin: 0;
+    margin-bottom: 34px;
+  }
+
+  /* Frequently asked Questions ==================================== */
+  .question {
+    padding: 0 50px;
+  }
+
+  .question-header {
+    letter-spacing: -1.1px;
+    padding-left: 50px;
+  }
+
+  .question__link-text {
+    max-width: 74.22vw;
+  }
+
+  .question__icon {
+    width: 7.48%;
+    height: auto;
+  }
+
+  .question__text {
+    font-size: max(0.62em, min(1em, calc(100vw * 1 / 48)));
+    line-height: 20px;
+  }
+
+  /* Footer ==================================== */
+  .footer-container {
+    flex-direction: column-reverse;
+  }
+  .footer-contacts {
+    height: auto;
+    margin-left: 50px;
+  }
+
+  .footer-contacts__logo {
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-contacts__link {
+    display: none;
+  }
+
+  .footer-contacts__socials {
+    margin: 0;
+  }
+
+  .footer-request {
+    margin: 0 50px;
+    margin-bottom: 58px;
+  }
+
+  .request-title {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: calc(20px + (40 + 40 * 0.7) * ((100vw - 576px) / 1920));
+    line-height: 24px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: calc(12px + (8 + 8 * 0.7) * ((100vw - 576px) / 1920));
+  }
+
+  .container {
+    padding: 0 15px;
+    max-width: 576px;
+  }
+
+  /* Header ==================================== */
+  .header-body {
+    height: 45px;
+    /* меняю блоки местами */
+    flex-direction: row-reverse;
+    padding: 0;
+    margin: 0;
+  }
+
+  .header-burger {
+    width: 25px;
+    height: 19px;
+  }
+
+  .header-burger span {
+    top: 8px;
+  }
+
+  .header-logo {
+    width: 103px;
+    height: 31px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  /* Section Slider ==================================== */
+  .swiper-container {
+    padding-top: 45px;
+    margin-bottom: 40px;
+  }
+
+  .swiper {
+    height: 262px;
+  }
+
+  .swiper__position {
+    display: flex;
+    flex-direction: column;
+    margin: 32px 22px;
+  }
+
+  .swiper__heading {
+    letter-spacing: -0.1px;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 7px;
+  }
+
+  .swiper__text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .swiper__btn {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    padding: 12px 28px;
+    margin: 0 auto;
+  }
+
+  /* Section About us ==================================== */
+  .about {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .about-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    transform: none;
+    margin: 0;
+  }
+
+  .about__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  /* Section Aside ==================================== */
+  .aside {
+    padding: 0;
+  }
+
+  .aside-block1 {
+    height: 89vw;
+    background-size: contain;
+    background-position: top;
+  }
+
+  .aside-block1__info {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent;
+    padding-top: 12px;
+  }
+
+  .aside-block1__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    color: #333333;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .aside-block1__btn {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #FF9900;
+    border: 2px solid #FF9900;
+    padding: 11px 43px;
+    margin: 0;
+  }
+
+  .aside-block2__pic {
+    background-position: 0 0;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 17px;
+  }
+
+  .aside-block2__pic--pic2 {
+    margin-bottom: -28px;
+  }
+
+  .aside-block2__text {
+    max-width: 100%;
+    padding-top: 55px;
+  }
+
+  .aside-block2__subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .aside-block2__lead {
+    max-width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  /* How we are working ==================================== */
+  .working {
+    padding: 0;
+  }
+
+  .working-header__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+    margin-bottom: 33px;
+  }
+
+  .working-header__list {
+    margin-bottom: 16px;
+  }
+
+  .working-header__text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .working-btn__details {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    padding: 12px 43px;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  .working-btn__contract {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    padding: 12px 30px;
+  }
+
+  .working-block__right {
+    height: auto;
+    margin: 0;
+    margin-bottom: 12px;
+  }
+
+  .working-block__subtitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    margin: 0;
+  }
+
+  .working-block__info {
+    width: 100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    transform: translateX(-2px);
+    margin-bottom: 18px;
+  }
+
+  /* Frequently asked Questions ==================================== */
+  .question {
+    padding: 0;
+  }
+
+  .question-header {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    padding: 0;
+    margin-bottom: 15px;
+  }
+
+  .question__link-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .question__icon {
+    transform: translateX(-2px);
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Footer ==================================== */
+  .footer-container {
+    padding: 0;
+    padding-bottom: 38px;
+  }
+
+  .footer-contacts {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .footer__logo {
+    margin-bottom: 15px;
+  }
+
+  .footer__logo img {
+    max-width: 131px;
+  }
+
+  .footer-contacts__logo {
+    height: 37px;
+    max-width: 131px;
+  }
+
+  .footer-contacts__socials {
+    height: 37px;
+    max-width: 131px;
+  }
+
+  .size {
+    width: 34.4px;
+    height: 34.4px;
+  }
+
+  .footer-request {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+
+  .request-title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+    margin-bottom: 22px;
+  }
+
+  .footer-request__control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 19px;
+  }
+
+  .footer-request__btn {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    padding: 12px 32px;
+    margin-bottom: 13px;
+  }
+
+  .footer-request__text {
+    margin-top: 0.5em;
+  }
+
+  .footer-request__link:nth-child(3) {
+    margin-bottom: 25px;
+  }
+
+  .footer-request__label {
+    padding: 0;
+    margin-left: 2px;
+  }
+
+  .footer-request__menu {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: calc(20px + (40 + 40 * 0.7) * ((100vw - 320px) / 540));
+    line-height: 24px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: calc(12px + (8 + 8 * 0.7) * ((100vw - 320px) / 540));
+  }
+
+  .container {
+    max-width: 320px;
+  }
+
+  /* Header ==================================== */
+  /* Section Slider ==================================== */
+  /* Section About us ==================================== */
+  /* Section Aside ==================================== */
+  .aside-block1 {
+    /* !!! Почему??? Надо разобраться */
+    margin-bottom: 160px;
+  }
+
+  .aside-block1__info {
+    padding: 0;
+  }
+
+  /* How we are working ==================================== */
+  .working {
+    margin-bottom: 39px;
+  }
+
+
+  /* Frequently asked Questions ==================================== */
+  .question-header {
+    margin-bottom: 15px;
+  }
+}
