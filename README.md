@@ -1,6 +1,6 @@
 ![Ссылка на изображение](https://github.com/AndreyFedyukin/website-Euclid/blob/main/img/logo-2.png)
 
-# Вёрстка сайта «Евклид». /Skillbox/
+# Вёрстка учебного сайта «Евклид». /Skillbox/
 
 Ссылка на сайт https://andreyfedyukin.github.io/website-Euclid/
 
