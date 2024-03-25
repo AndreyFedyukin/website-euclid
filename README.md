@@ -2,7 +2,7 @@
 
 # Вёрстка учебного сайта «Евклид». /Skillbox/
 
-Ссылка на сайт https://andreyfedyukin.github.io/website-Euclid/
+Ссылка на сайт - <https://andreyfedyukin.github.io/website-euclid/>
 
 ---
 
