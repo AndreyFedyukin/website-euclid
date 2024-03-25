@@ -1,4 +1,4 @@
-![Ссылка на изображение](https://github.com/AndreyFedyukin/website-Euclid/blob/main/img/logo-2.png)
+![Ссылка на изображение](https://github.com/AndreyFedyukin/website-euclid/blob/main/img/logo-2.png)
 
 # Вёрстка учебного сайта «Евклид». /Skillbox/
 
